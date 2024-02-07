@@ -1,0 +1,42 @@
+buildscript {
+    ext {
+        coreKtxVersion = '1.12.0'
+        appCompatVersion = '1.6.1'
+        constraintVersion = '2.1.4'
+        androidXDependencies = [
+                lib       : "androidx.core:core-ktx:$coreKtxVersion",
+                appCompat : "androidx.appcompat:appcompat:$appCompatVersion",
+                constraint: "androidx.constraintlayout:constraintlayout:$constraintVersion"
+        ]
+
+        androidMaterialVersion = '1.10.0'
+        androidAdsVersion = '18.0.1'
+        androidDependencies = [
+                material: "com.google.android.material:material:$androidMaterialVersion",
+                ads     : "com.google.android.gms:play-services-ads-identifier:$androidAdsVersion"
+        ]
+
+        lifecycleVersion = '2.6.2'
+        lifecycleDependencies = [
+                runtimeKtx      : "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion",
+                livedata        : "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+        ]
+
+        koinVersion = '3.5.0'
+        koinComposeVersion = '3.5.0'
+        koinDependencies = [
+                lib              : "io.insert-koin:koin-android:$koinVersion",
+                navigationCompose: "io.insert-koin:koin-androidx-compose-navigation:$koinComposeVersion",
+                compose          : "io.insert-koin:koin-androidx-compose:$koinComposeVersion"
+        ]
+
+        oneSignalVersion = '5.0.5'
+        oneSignalDependencies = [
+                lib: "com.onesignal:OneSignal:$oneSignalVersion"
+        ]
+    }
+}
+plugins {
+    id 'com.android.application' version '8.1.4' apply false
+    id 'org.jetbrains.kotlin.android' version '1.8.20' apply false
+}
